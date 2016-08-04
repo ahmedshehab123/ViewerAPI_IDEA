@@ -1,0 +1,16 @@
+@CHARSET "UTF-8";
+div{
+    
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    padding: 10px;
+}
+.container{
+    display:flex;
+}
+.fixed{
+    width: 70%;
+}
+.flex-item{
+	width: 30%;
+    flex-grow: 1;
+}
