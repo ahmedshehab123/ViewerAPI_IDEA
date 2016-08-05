@@ -6,6 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Viewer Api</title>
 <link rel="stylesheet"  href="/ViewerAPI/resources/css/styles.css" type="text/css" >
+<script type="text/javascript" src="/ViewerAPI/resources/scripts/sketchfab-viewer-1.0.0.js"></script>
+<script type="text/javascript" src="/ViewerAPI/resources/scripts/quizscript.js"></script>
 </head>
 <body>
 <div class="container">
@@ -16,8 +18,8 @@
     on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
 </p>
 </div>
-<div class="flex-item">
-
+<div id="rightdiv" class="flex-item">
+<button onclick="loadquiz()">Start Quiz</button>
 <div >
 <h4>Engine Info</h4>
 here is some information <br/>
@@ -28,3 +30,4 @@ about this motor and the video support more <br/><br/><br/><br/><br/><br/><br/><
 </div>
 </body>
 </html>
+
