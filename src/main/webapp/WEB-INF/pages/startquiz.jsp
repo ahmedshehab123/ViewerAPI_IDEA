@@ -24,31 +24,11 @@
     on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
 </p>
 </div>
-
 <div id="rightdiv" class="flex-item">
-<c:if test="${sessionScope.userlogin.id !=null }"> 
-<button onclick="loadquiz()">Start Quiz</button>
-</c:if>
-<c:if test="${sessionScope.userlogin.id ==null }"> 
-<button onclick="createUser()">Start Quiz</button>
-</c:if>
-
-
-<div >
-<iframe style="background: transparent;" id="iframe" width="100%" height="300" ></iframe>
-<script type="text/javascript">
-var article="<br/>A starter "+
-"(also self starter, self, or starter motor) is an electric motor, pneumatic motor, hydraulic motor, an internal-combustion engine in case of very large engines or other device used for rotating an internal-combustion engine so as to initiate the engine's operation under its own power.Internal-combustion engines are feedback systems, which once started rely on the inertia from each cycle to initiate the next cycle. In a four-stroke engine, the third stroke releases energy from the fuel, powering the fourth (exhaust) stroke and also the first two (intake, compression) strokes of the next cycle, as well as powering the engine's external load. To start the first cycle at the beginning of any particular session, the first two strokes must be powered in some other way than from the engine itself. The starter motor is used for this purpose and is not required once the engine starts running and its feedback loop becomes self-sustaining."+
-"<a  href="+"https://en.wikipedia.org/wiki/Starter_(engine)"+" >Read"+" More</a>";
-var doc = document.getElementById('iframe').contentWindow.document;
-doc.open();
-doc.write(article);
-doc.close();
-</script>
-
-
-</div>
-<iframe width="354" height="280" src="https://www.youtube.com/embed/_f6kM1e1fBA" frameborder="0" allowfullscreen></iframe>
+<h3>Quiz mode</h3>
+<b>Answer this question to go to next one</b><br/><br/>
+<b>(1)</b>Please select the starter motor.<br/><br/><br/><br/>
+<button onclick="backtolanding()">Back</button>
 </div>
 </div>
 </body>
