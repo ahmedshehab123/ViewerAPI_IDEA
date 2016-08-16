@@ -13,22 +13,27 @@ import org.springframework.stereotype.Service;
 public class UserServices {
 	@PersistenceContext(type = PersistenceContextType.EXTENDED)
 	private EntityManager entityManager;
-	
-	
-	public User createUser(User user){
+
+	public User createUser(User user) {
 		entityManager.persist(user);
 		return user;
 	}
-	public User login(String email,String password){
-		Query query=entityManager.createQuery("SELECT u FROM User u WHERE u.email=:emailparam AND u.password=:passwordparam");
+
+	public User login(String email, String password) {
+		Query query = entityManager
+				.createQuery("SELECT u FROM User u WHERE u.email=:emailparam AND u.password=:passwordparam");
 		query.setParameter("emailparam", email);
-	    query.setParameter("passwordparam", password);
-	    User user=(User) query.getSingleResult();
+		query.setParameter("passwordparam", password);
+		User user = (User) query.getSingleResult();
 		return user;
-		
+
 	}
-	
-	
-	
-	
+
+	public User checkExistingEmail(String email) {
+		Query query = entityManager.createQuery("SELECT u FROM User u WHERE u.email=:emailparam");
+		query.setParameter("emailparam", email);
+		User user = (User) query.getSingleResult();
+		return user;
+	}
+
 }

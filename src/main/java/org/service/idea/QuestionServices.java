@@ -24,7 +24,13 @@ public class QuestionServices {
 		 @SuppressWarnings("unchecked")
 		List<Questions> rlist=query.getResultList();
         return rlist;
-        
 	}
+	public Questions quizQuestions(int questionID) {
+		Query query=entityManager.createQuery("SELECT a FROM Questions a WHERE a.questionID=:id");
+		query.setParameter("id",questionID);
+		Questions question= (Questions) query.getSingleResult();
+        return question;
+	}
+	
 
 }

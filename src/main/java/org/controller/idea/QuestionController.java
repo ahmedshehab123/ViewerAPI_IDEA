@@ -25,4 +25,13 @@ public class QuestionController {
 		request.setAttribute("qlist", qlist);
 		return "dashboard";
 	}
+	@RequestMapping(value="/startquiz",method=RequestMethod.GET)
+	public String login(HttpServletRequest request){
+		int i=3;
+		Questions question=questionServices.quizQuestions(i);
+		request.setAttribute("question", question);
+		
+		return "startquiz";
+		}
+		
 }

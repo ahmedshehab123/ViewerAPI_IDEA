@@ -27,7 +27,7 @@
 
 <div id="rightdiv" class="flex-item">
 <c:if test="${sessionScope.userlogin.id !=null }"> 
-<button onclick="loadquiz()">Start Quiz</button>
+<a href="startquiz">Start Quiz</a>
 </c:if>
 <c:if test="${sessionScope.userlogin.id ==null }"> 
 <button onclick="createUser()">Start Quiz</button>

@@ -18,52 +18,23 @@ div {
 	display: flex;
 }
 
-.fixed {
-	width: 35%;
-}
-
 .flex-item {
-	width: 30%;
+	width: 50%;
 	flex-grow: 1;
 }
 
 .right-item {
-	width: 35%;
+	width: 50%;
 	flex-grow: 1;
 }
 </style>
 </head>
 <body>
 	Welcome ${sessionScope.adminlogin.userName }
-	<a href="adminlogout">Logout</a>
+	<a href="manageadmin">Manage Admin</a><a href="adminlogout">Logout</a><br/>
 	<div class="container">
 		<div class="fixed">
-			<center>
-				<h4>Manage Admin Accounts</h4>
-				Create Admin Account
-				<form:form modelAttribute="createAdmin" action="createadmin"
-					method="post">
-					<table>
-						<tr>
-							<td>Username</td>
-							<td><input type="text" name="userName" /></td>
-						</tr>
-						<tr>
-							<td>Password</td>
-							<td><input type="password" name="password" /></td>
-						</tr>
-						<tr>
-							<td colspan="2"><center>
-									<button>submit</button>
-								</center></td>
-						</tr>
-					</table>
-				</form:form>
-
-			</center>
-		</div>
-
-		<div class="flex-item">
+			
 			<center>
 				<h3>Manage Questions</h3>
 				<table>
@@ -71,11 +42,11 @@ div {
 						method="post">
 						<tr>
 							<td>Add new question</td>
-							<td><input name="question" type="text" /></td>
+							<td><input name="question" type="text" required /></td>
 						</tr>
 						<tr>
 							<td>Add question's answer</td>
-							<td><input name="realAnswer" type="text" /></td>
+							<td><input name="realAnswer" type="text" required/></td>
 						</tr>
 
 						<input type="hidden" name="adminID"
@@ -89,8 +60,9 @@ div {
 					</form:form>
 				</table>
 			</center>
-
 		</div>
+
+		
 		<div class="right-item">
 			<center>
 				<h3>Questions</h3>

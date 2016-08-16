@@ -12,11 +12,6 @@ public class ViewerController {
 		
 		return "landing";
 	}
-	@RequestMapping(value="/startquiz",method=RequestMethod.GET)
-	public String startQuiz(){
-		
-		return "quizpage";
-	}
 	@RequestMapping(value="/backtolanding",method=RequestMethod.GET)
 	public String backtolanding(){
 		

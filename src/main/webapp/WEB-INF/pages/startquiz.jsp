@@ -27,7 +27,11 @@
 <div id="rightdiv" class="flex-item">
 <h3>Quiz mode</h3>
 <b>Answer this question to go to next one</b><br/><br/>
-<b>(1)</b>Please select the starter motor.<br/><br/><br/><br/>
+${requestScope.question.question}<br/>
+<input type="radio" name="answer" value="True">True<br/>
+<input type="radio" name="answer" value="False">False<br/>
+<button>next</button>
+
 <button onclick="backtolanding()">Back</button>
 </div>
 </div>

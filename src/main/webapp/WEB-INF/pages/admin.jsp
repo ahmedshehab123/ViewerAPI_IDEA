@@ -10,7 +10,7 @@
 
 <br/><br/><br/>
 	<center>
-
+   ${nameerror}
 		<form action="adminlogin" method="post">
 			<table>
 				<tr>
